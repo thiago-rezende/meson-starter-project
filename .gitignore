@@ -91,6 +91,9 @@ dkms.conf
 *_REMOTE_*.txt
 
 ### Meson ###
+# bild
+build
+builddir
 # subproject directories
 /subprojects/*
 !/subprojects/*.wrap
