@@ -1,0 +1,19 @@
+name: CI
+
+on: [push, pull_request]
+
+jobs:
+
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v2
+
+    - name: Meson Build
+      uses: BSFishy/meson-build@v1.0.1
+      with:
+        action: compile -C build
+        directory: build
+        meson-version: 0.54.0
+        ninja-version: 1.10.0
