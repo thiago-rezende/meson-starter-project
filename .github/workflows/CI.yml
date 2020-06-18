@@ -14,7 +14,8 @@ jobs:
       run: |
         sudo apt-get update
         sudo apt-get install ninja-build
-        sudo pip3 install setuptools meson
+        sudo pip3 install setuptools
+        sudo pip3 install meson
 
     - name: Meson Build
       run: |
