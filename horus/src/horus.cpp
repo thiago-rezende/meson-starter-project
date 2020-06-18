@@ -17,4 +17,9 @@ namespace horus
     {
         std::cout << "[HORUS]: Hello " << name << std::endl;
     }
+
+    int get_one()
+    {
+        return 1;
+    }
 } // namespace horus

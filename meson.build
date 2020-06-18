@@ -6,3 +6,4 @@ project('MesonStarter',
 
 subdir('horus')
 subdir('app')
+subdir('tests')

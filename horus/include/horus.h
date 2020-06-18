@@ -26,6 +26,13 @@ namespace horus
      * @param name Name to greet
      */
     void greet(const char *name);
+
+    /**
+     * @brief Get the value one
+     *
+     * @return int
+     */
+    int get_one();
 } // namespace horus
 
 #endif // HORUS_H
