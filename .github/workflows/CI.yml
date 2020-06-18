@@ -13,7 +13,8 @@ jobs:
     - name: System Setup
       run: |
         sudo apt-get update
-        sudo apt-get install gcc meson ninja-build
+        sudo apt-get install ninja-build
+        sudo pip3 install meson
 
     - name: Meson Build
       run: |
