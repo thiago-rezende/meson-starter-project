@@ -21,3 +21,7 @@ else
         include_directories: horus_inc,
         install: true)
 endif
+
+
+horus_dep = declare_dependency(link_with : horus,
+    include_directories : horus_inc)
