@@ -12,8 +12,8 @@ jobs:
 
     - name: System Setup
       run: |
-        apt-get update
-        apt-get install gcc meson ninja-build
+        sudo apt-get update
+        sudo apt-get install gcc meson ninja-build
 
     - name: Meson Build
       run: |
