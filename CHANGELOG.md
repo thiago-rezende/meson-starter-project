@@ -4,6 +4,10 @@
 
 ## [Unreleased]
 
+
+## [v1.0.0]
+ - [744533b] docs: updated project version string to 1.0.0 (Thiago Rezende)
+ - [b580e52] docs: added changelog generator (Thiago Rezende)
  - [0064b99] docs: added build status badge to readme (Thiago Rezende)
  - [76dfd24] ci: fixed wrong variable placement (Thiago Rezende)
  - [6a2941e] ci: changed cpp_std to 11 for ci purposes (Thiago Rezende)
@@ -39,3 +43,4 @@
  - [9af718d] chore: added .editorconfig (Thiago Rezende)
  - [0d44796] chore(git): added .gitattributes (Thiago Rezende)
  - [489c9ad] chore(git): added .gitignore (Thiago Rezende)
+
