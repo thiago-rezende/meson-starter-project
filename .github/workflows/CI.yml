@@ -19,11 +19,11 @@ jobs:
 
     - name: Meson Build
       run: |
-        meson build
+        meson build -Dcpp_std=c++11
 
     - name: Compile
       run: |
-        ninja -C build -Dcpp_std=c++11
+        ninja -C build
 
     - name: Run Tests
       run: |
