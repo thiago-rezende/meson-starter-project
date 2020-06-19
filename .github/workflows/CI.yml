@@ -23,7 +23,7 @@ jobs:
 
     - name: Compile
       run: |
-        ninja -C build
+        ninja -C build -Dcpp_std=c++11
 
     - name: Run Tests
       run: |
