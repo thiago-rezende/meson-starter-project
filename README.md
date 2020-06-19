@@ -26,4 +26,4 @@
 [license-badge]: https://img.shields.io/badge/license-MIT-blue.svg?style=flat-square
 [meson-badge]: https://img.shields.io/badge/Meson-0.54.0-blueviolet.svg?style=flat-square
 [cpp-badge]: https://img.shields.io/badge/C++-2a-orange.svg?style=flat-square
-[build-status-badge]: https://img.shields.io/badge/build-passing-green.svg?style=flat-square
+[build-status-badge]: https://github.com/thiago-rezende/meson-starter-project/workflows/CI/badge.svg
