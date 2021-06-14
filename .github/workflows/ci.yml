@@ -41,7 +41,7 @@ jobs:
       - name: Msys2 path [Windows]
         if: ${{ runner.os == 'Windows' }}
         run: |
-          echo "::add-path::C:\msys64\mingw64\bin"
+          echo "C:\msys64\mingw64\bin" >> $GITHUB_PATH
 
       # Meson setup
       - name: Meson setup
