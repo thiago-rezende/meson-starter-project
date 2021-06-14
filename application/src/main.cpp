@@ -1,7 +1,7 @@
 /**
- * @file pch.h
+ * @file main.cpp
  * @author Thiago Rezende (bitrateti@gmail.com)
- * @brief Horus Lib pre-complied header
+ * @brief Application entry point
  * @version 0.1
  * @date 2020-06-18
  *
@@ -9,9 +9,10 @@
  *
  */
 
-#ifndef HORUS_PCH_H
-#define HORUS_PCH_H
-
 #include <iostream>
 
-#endif // HORUS_PCH_H
+int main(int argc, char **argv)
+{
+    std::cout << "Hello, Meson!" << std::endl;
+    return 0;
+}

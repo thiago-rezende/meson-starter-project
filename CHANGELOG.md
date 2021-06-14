@@ -4,6 +4,7 @@
 
 ## [Unreleased]
 
+ - [d1cf96c] docs: generated changelog to v1.0.0 (Thiago Rezende)
 
 ## [v1.0.0]
  - [744533b] docs: updated project version string to 1.0.0 (Thiago Rezende)

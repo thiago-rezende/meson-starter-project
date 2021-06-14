@@ -2,7 +2,7 @@
 
 ###########################
 # Git Changelog Generator #
-#      By: HorusHe4rt     #
+#   By: Thiago Rezende    #
 ###########################
 
 file=CHANGELOG.md

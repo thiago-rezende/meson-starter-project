@@ -1,29 +1,26 @@
-# C-Plus-Plus Starter Project Using Meson
-![build-status-badge] ![license-badge] ![cpp-badge] ![meson-badge]
-<!-- PROJECT LOGO -->
-<br />
-<div align="center">
-  <a href="https://github.com/thiago-rezende/meson-starter-project">
-    <img src=".github/logo.png" alt="Horus Software Logo" width="100" height="100">
-  </a>
+<!-- C++ Starter Project Using Meson -->
 
-  <h3 align="center">Meson Starter Project</h3>
-  <p align="center">
-    A Simple C++ Starter Project Using Meson
-    <br />
-    <a href="#how-to-use"><strong>Explore the docs »</strong></a>
-    <br />
-    <br />
-    <a href="https://github.com/thiago-rezende/meson-starter-project/issues">Report Bug</a>
-    ·
-    <a href="https://github.com/thiago-rezende/meson-starter-project/issues">Request Feature</a>
-  </p>
-</div>
+<!-- Logo -->
+<img src=".github/logo.png" align="right" width="129"/>
+
+<!-- Title -->
+# C++ Starter Project Using Meson
+[![ci-badge]][ci-url] [![license-badge]][license-url] [![cpp-badge]][cpp-url] [![meson-badge]][meson-url]
+<!-- Short Description -->
+> A Simple C++ Starter Project Using [Meson][meson-url]
+
+<!-- Description -->
+This project was developed to be a simple and easy to use starter point for creating a [C++][cpp-url] project using the [Meson][meson-url] build system
+
 
 <!-- Links -->
+[ci-url]: https://github.com/thiago-rezende/meson-starter-project/actions
+[license-url]: https://opensource.org/licenses/MIT
+[cpp-url]: https://en.cppreference.com/w/cpp
+[meson-url]: https://mesonbuild.com/
 
 <!-- Badges -->
 [license-badge]: https://img.shields.io/badge/license-MIT-blue.svg?style=flat-square
 [meson-badge]: https://img.shields.io/badge/Meson-0.54.0-blueviolet.svg?style=flat-square
-[cpp-badge]: https://img.shields.io/badge/C++-2a-orange.svg?style=flat-square
-[build-status-badge]: https://github.com/thiago-rezende/meson-starter-project/workflows/CI/badge.svg
+[cpp-badge]: https://img.shields.io/badge/C++-17-orange.svg?style=flat-square
+[ci-badge]: https://img.shields.io/github/workflow/status/thiago-rezende/meson-starter-project/ci?label=CI&style=flat-square
