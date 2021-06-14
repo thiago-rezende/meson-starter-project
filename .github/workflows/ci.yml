@@ -27,7 +27,7 @@ jobs:
         id: cache
         with:
           path: |
-            build/
+            builddir/
           key: ${{ runner.os }}-meson-${{ hashFiles('**/meson.build', '**/meson_options.txt') }}
 
       # System setup
@@ -37,27 +37,23 @@ jobs:
       - run: |
           pip install ninja meson
 
-      - name: Add clang path to $PATH env
-        if: ${{ runner.os == 'Windows' }}
-        run: echo "PATH=$PATH:C:\msys64\mingw64\bin" >> $GITHUB_ENV
-
       # Meson setup
       - name: Meson setup
         env:
-          CC: clang
-          CXX: clang++
+          CC: gcc
+          CXX: g++
         run: |
-          meson setup build
+          meson setup builddir
 
       # Meson compile
       - name: Meson compile
         run: |
-          ninja -C build
+          ninja -C builddir
 
       # Meson test
       - name: Run Tests
         run: |
-          ninja test -C build
+          ninja test -C builddir
 
   # Test job
   test:
@@ -81,7 +77,7 @@ jobs:
         id: cache
         with:
           path: |
-            build/
+            builddir/
           key: ${{ runner.os }}-meson-${{ hashFiles('**/meson.build', '**/meson_options.txt') }}
 
       # System setup
@@ -94,4 +90,4 @@ jobs:
       # Meson test
       - name: Run Tests
         run: |
-          ninja test -C build
+          ninja test -C builddir
