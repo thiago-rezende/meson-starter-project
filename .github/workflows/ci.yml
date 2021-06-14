@@ -59,8 +59,8 @@ jobs:
   test:
     needs: build
     strategy:
-    matrix:
-      os: [ubuntu-latest, macos-latest, windows-latest]
+      matrix:
+        os: [ubuntu-latest, macos-latest, windows-latest]
 
     # Runs the job on each OS
     runs-on: ${{ matrix.os }}
