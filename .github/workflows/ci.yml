@@ -37,18 +37,15 @@ jobs:
       - run: |
           pip install ninja meson
 
-      # Meson setup [Linux/macOS]
-      - name: Meson setup [Linux/macOS]
-        if: ${{ runner.os == 'Linux' || runner.os == 'macOS' }}
+      - name: Add clang path to $PATH env
+        if: ${{ runner.os == 'Windows' }}
+        run: echo "PATH=$PATH:C:\msys64\mingw64\bin" >> $GITHUB_ENV
+
+      # Meson setup
+      - name: Meson setup
         env:
           CC: clang
           CXX: clang++
-        run: |
-          meson setup builddir
-
-      # Meson setup [Windows]
-      - name: Meson setup [Windows]
-        if: ${{ runner.os == 'Windows' }}
         run: |
           meson setup builddir
 
