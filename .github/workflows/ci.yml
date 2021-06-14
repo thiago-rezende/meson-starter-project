@@ -27,7 +27,7 @@ jobs:
         id: cache
         with:
           path: |
-            builddir/
+            build/
           key: ${{ runner.os }}-meson-${{ hashFiles('**/meson.build', '**/meson_options.txt') }}
 
       # System setup
@@ -47,17 +47,17 @@ jobs:
           CC: clang
           CXX: clang++
         run: |
-          meson setup builddir --reconfigure
+          meson setup build --reconfigure
 
       # Meson compile
       - name: Meson compile
         run: |
-          ninja -C builddir
+          ninja -C build
 
       # Meson test
       - name: Run Tests
         run: |
-          ninja test -C builddir
+          ninja test -C build
 
   # Test job
   test:
@@ -81,7 +81,7 @@ jobs:
         id: cache
         with:
           path: |
-            builddir/
+            build/
           key: ${{ runner.os }}-meson-${{ hashFiles('**/meson.build', '**/meson_options.txt') }}
 
       # System setup
@@ -94,4 +94,4 @@ jobs:
       # Meson test
       - name: Run Tests
         run: |
-          ninja test -C builddir
+          ninja test -C build
