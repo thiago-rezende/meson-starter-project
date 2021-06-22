@@ -46,6 +46,13 @@ jobs:
         run: |
           meson setup builddir
 
+      # Setup Visual Studio shell [Windows]
+      - name: Setup Visual Studio shell [Windows]
+        if: ${{ runner.os == 'Windows' }}
+        uses: egor-tensin/vs-shell@v2
+        with:
+          arch: x64
+
       # Meson setup [Windows]
       - name: Meson setup [Windows]
         if: ${{ runner.os == 'Windows' }}
