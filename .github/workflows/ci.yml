@@ -46,24 +46,22 @@ jobs:
         run: |
           meson setup builddir
 
-      # Setup Visual Studio shell [Windows]
-      # - name: Setup Visual Studio shell [Windows]
-      #   if: ${{ runner.os == 'Windows' }}
-      #   uses: egor-tensin/vs-shell@v2
-      #   with:
-      #     arch: x64
-
-      # Setup MSBuild [Windows]
-      - name: setup-msbuild
+      # Setup MSYS2 [Windows]
+      - uses: msys2/setup-msys2@v2
         if: ${{ runner.os == 'Windows' }}
-        uses: microsoft/setup-msbuild@v1
+        with:
+          msystem: CLANG64
+          update: true
+          install: >-
+            base-devel
 
       # Meson setup [Windows]
       - name: Meson setup [Windows]
         if: ${{ runner.os == 'Windows' }}
+        shell: msys2 {0}
         env:
-          CC: clang-cl
-          CXX: clang-cl
+          CC: clang
+          CXX: clang++
         run: |
           meson setup builddir
 
