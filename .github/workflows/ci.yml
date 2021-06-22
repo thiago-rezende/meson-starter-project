@@ -15,6 +15,15 @@ jobs:
     # Runs the job on each OS
     runs-on: ${{ matrix.os }}
 
+    # Job defaults
+    defaults:
+      run:
+        shell: bash
+
+    # Default env vars
+    env:
+      MSYSTEM: CLANG64
+
     # Job steps
     steps:
       # Checkout the repo with submodules
@@ -37,48 +46,25 @@ jobs:
       - run: |
           pip install ninja meson
 
-      # Meson setup [Linux/macOS]
-      - name: Meson setup [Linux/macOS]
-        if: ${{ runner.os == 'Linux' || runner.os == 'macOS' }}
-        env:
-          CC: clang
-          CXX: clang++
-        run: |
-          meson setup builddir
-
-      # Meson compile [Linux/macOS]
-      - name: Meson compile [Linux/macOS]
-        if: ${{ runner.os == 'Linux' || runner.os == 'macOS' }}
-        run: |
-          ninja -C builddir
-
       # Setup MSYS2 [Windows]
       - name: Setup MSYS2 [Windows]
-        uses: msys2/setup-msys2@v2
         if: ${{ runner.os == 'Windows' }}
-        with:
-          msystem: CLANG64
-          update: true
-          install: >-
-            base-devel
-            mingw-w64-clang-x86_64-toolchain
-            mingw-w64-clang-x86_64-python
+        run: |
+          pacman -S base-devel \
+            mingw-w64-clang-x86_64-toolchain \
+            mingw-w64-clang-x86_64-python \
             mingw-w64-clang-x86_64-meson
 
-      # Meson setup [Windows]
-      - name: Meson setup [Windows]
-        if: ${{ runner.os == 'Windows' }}
-        shell: msys2 {0}
+      # Meson setup
+      - name: Meson setup
         env:
           CC: clang
           CXX: clang++
         run: |
           meson setup builddir
 
-      # Meson compile [Windows]
-      - name: Meson compile [Windows]
-        if: ${{ runner.os == 'Windows' }}
-        shell: msys2 {0}
+      # Meson compile
+      - name: Meson compile
         run: |
           ninja -C builddir
 
