@@ -47,11 +47,16 @@ jobs:
           meson setup builddir
 
       # Setup Visual Studio shell [Windows]
-      - name: Setup Visual Studio shell [Windows]
+      # - name: Setup Visual Studio shell [Windows]
+      #   if: ${{ runner.os == 'Windows' }}
+      #   uses: egor-tensin/vs-shell@v2
+      #   with:
+      #     arch: x64
+
+      # Setup MSBuild [Windows]
+      - name: setup-msbuild
         if: ${{ runner.os == 'Windows' }}
-        uses: egor-tensin/vs-shell@v2
-        with:
-          arch: x64
+        uses: microsoft/setup-msbuild@v1
 
       # Meson setup [Windows]
       - name: Meson setup [Windows]
@@ -66,11 +71,6 @@ jobs:
       - name: Meson compile
         run: |
           ninja -C builddir
-
-      # Meson test
-      - name: Run Tests
-        run: |
-          ninja test -C builddir
 
   # Test job
   test:
