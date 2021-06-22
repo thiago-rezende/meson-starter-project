@@ -4,6 +4,21 @@
 
 ## [Unreleased]
 
+
+## [v2.0.0]
+ - [2b8574f] docs: update version number (Thiago Rezende)
+ - [d822cc1] chore: updated project name and added folder structure info to summary (Thiago Rezende)
+ - [0ded16f] ci: use gcc toolchain on all runners (Thiago Rezende)
+ - [b80d645] ci: removed --reconfigure arg from meson setup step (Thiago Rezende)
+ - [867ce2d] ci: changed build directory from builddir to build (Thiago Rezende)
+ - [7372df1] ci: added --reconfigure arg to meson setup step (Thiago Rezende)
+ - [ea06b68] ci: add clang path do env (Thiago Rezende)
+ - [0e0cb2b] ci: auto detect the compiler on windows runner (Thiago Rezende)
+ - [86d7d11] ci: using the new method of adding folders to system path (Thiago Rezende)
+ - [7d6c128] ci: added msys2 bin to path on windows runner (Thiago Rezende)
+ - [b7f0a5d] ci: using clang-cl on windows runner (Thiago Rezende)
+ - [b76d602] fix(ci): workflow matrix indentation (Thiago Rezende)
+ - [9138a2c] build: complete restructuring of the project (Thiago Rezende)
  - [d1cf96c] docs: generated changelog to v1.0.0 (Thiago Rezende)
 
 ## [v1.0.0]
