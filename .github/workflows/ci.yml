@@ -52,7 +52,7 @@ jobs:
         if: ${{ runner.os == 'Windows' }}
         with:
           msystem: CLANG64
-          path-type: $env:PATH
+          path-type: inherit
           update: true
           install: >-
             base-devel
