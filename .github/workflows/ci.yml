@@ -55,7 +55,7 @@ jobs:
       # Setup MSYS2 [Windows]
       - name: Setup MSYS2 [Windows]
         if: ${{ runner.os == 'Windows' }}
-        shell: msys2
+        shell: msys2 {0}
         run: |
           pacman -S base-devel \
             mingw-w64-clang-x86_64-toolchain \
