@@ -30,13 +30,17 @@ jobs:
             builddir/
           key: ${{ runner.os }}-meson-${{ hashFiles('**/meson.build', '**/meson_options.txt') }}
 
-      # System setup
-      - name: Setup python meson and ninja [Linux/macOS]
+      # Setup python [Linux/macOS]
+      - name: Setup python [Linux/macOS]
         if: ${{ runner.os == 'Linux' || runner.os == 'macOS' }}
         uses: actions/setup-python@v2
         with:
           python-version: '3.x'
-      - run: |
+
+      # Setup meson and ninja [Linux/macOS]
+      - name: Setup meson and ninja [Linux/macOS]
+        if: ${{ runner.os == 'Linux' || runner.os == 'macOS' }}
+        run: |
           pip install ninja meson
 
       # Meson setup [Linux/macOS]
