@@ -98,5 +98,6 @@ jobs:
       # Meson test [Windows]
       - name: Run Tests [Windows]
         if: ${{ runner.os == 'Windows' }}
+        shell: msys2 {0}
         run: |
           ninja test -C builddir
