@@ -5,6 +5,29 @@
 ## [Unreleased]
 
 
+## [v2.1.0]
+ - [b041c80] docs: update version number (Thiago Rezende)
+ - [79afa1d] fix(ci): using msys2 shell on test step on windows runner (Thiago Rezende)
+ - [e2e7273] ci: removed fail-fast and merged test job with build (Thiago Rezende)
+ - [5f57ccd] feat: added meson options fil (Thiago Rezende)
+ - [3a843d5] ci: using msys2/clang64 on windows runner and clang on linux/macos runners (Thiago Rezende)
+ - [5c4fe04] ci: added msys2 shell (Thiago Rezende)
+ - [4eb6d36] ci: added msys2 to path on window runner (Thiago Rezende)
+ - [897d713] ci: using pre-installed msys2 (Thiago Rezende)
+ - [53391ab] ci: added clang toolchain to msys2 (Thiago Rezende)
+ - [cd8ec2e] ci: switched to clang repo on msys2 (Thiago Rezende)
+ - [52e2266] fix(ci): removed msys2 shell from Linux/macOS steps (Thiago Rezende)
+ - [52194bd] ci: using msys2 meson on windows (Thiago Rezende)
+ - [c55053c] ci: changed path-type on setup-msys2 (Thiago Rezende)
+ - [8a3515e] ci: changed path-type on setup-msys2 (Thiago Rezende)
+ - [2b719e3] ci: added setup-msys2 action (Thiago Rezende)
+ - [22c5b43] ci: added setub-msbuild action (Thiago Rezende)
+ - [95eaf2a] ci: added step to setup visual studio shell on windows runner (Thiago Rezende)
+ - [a626c46] ci: using clang-cl on Windows (Thiago Rezende)
+ - [1ced110] ci: temporarily removed cache step from build job (Thiago Rezende)
+ - [8b49316] ci: using clang on Linux/macOS and cl on Windows (Thiago Rezende)
+ - [05f3a8c] docs: generated new changelog (Thiago Rezende)
+
 ## [v2.0.0]
  - [2b8574f] docs: update version number (Thiago Rezende)
  - [d822cc1] chore: updated project name and added folder structure info to summary (Thiago Rezende)
