@@ -49,7 +49,6 @@ jobs:
       # Meson compile [Linux/macOS]
       - name: Meson compile [Linux/macOS]
         if: ${{ runner.os == 'Linux' || runner.os == 'macOS' }}
-        shell: msys2 {0}
         run: |
           ninja -C builddir
 
