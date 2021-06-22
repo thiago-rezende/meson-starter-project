@@ -47,10 +47,12 @@ jobs:
           meson setup builddir
 
       # Setup MSYS2 [Windows]
-      - uses: msys2/setup-msys2@v2
+      - name: Setup MSYS2 [Windows]
+        uses: msys2/setup-msys2@v2
         if: ${{ runner.os == 'Windows' }}
         with:
           msystem: CLANG64
+          path-type: $env:PATH
           update: true
           install: >-
             base-devel
