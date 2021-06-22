@@ -46,9 +46,16 @@ jobs:
       - run: |
           pip install ninja meson
 
+      # Setup path [Windows]
+      - name: Setup MSYS2 path [Windows]
+        if: ${{ runner.os == 'Windows' }}
+        run: |
+          echo "C:\msys64" >> $GITHUB_PATH
+
       # Setup MSYS2 [Windows]
       - name: Setup MSYS2 [Windows]
         if: ${{ runner.os == 'Windows' }}
+        shell: msys2
         run: |
           pacman -S base-devel \
             mingw-w64-clang-x86_64-toolchain \
