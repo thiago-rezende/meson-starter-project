@@ -1,8 +1,8 @@
 # Workflow name
 name: ci
 
-# Triggers only when pushing/merging
-on: [push]
+# Triggers the workflow on push or pull request events
+on: [push, pull_request]
 
 # Workflow jobs
 jobs:
@@ -37,11 +37,21 @@ jobs:
       - run: |
           pip install ninja meson
 
-      # Meson setup
-      - name: Meson setup
+      # Meson setup [Linux/macOS]
+      - name: Meson setup [Linux/macOS]
+        if: ${{ runner.os == 'Linux' || runner.os == 'macOS' }}
         env:
-          CC: gcc
-          CXX: g++
+          CC: clang
+          CXX: clang++
+        run: |
+          meson setup builddir
+
+      # Meson setup [Windows]
+      - name: Meson setup [Windows]
+        if: ${{ runner.os == 'Windows' }}
+        env:
+          CC: cl
+          CXX: cl
         run: |
           meson setup builddir
 
