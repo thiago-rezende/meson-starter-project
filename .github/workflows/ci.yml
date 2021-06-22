@@ -50,8 +50,8 @@ jobs:
       - name: Meson setup [Windows]
         if: ${{ runner.os == 'Windows' }}
         env:
-          CC: cl
-          CXX: cl
+          CC: clang-cl
+          CXX: clang-cl
         run: |
           meson setup builddir
 
